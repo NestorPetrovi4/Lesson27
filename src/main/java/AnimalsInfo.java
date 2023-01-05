@@ -8,7 +8,7 @@ public class AnimalsInfo {
     private String upvotes;
 
     public AnimalsInfo(
-            @JsonProperty("Id") String Id,
+            @JsonProperty("id") String Id,
             @JsonProperty("text") String text,
             @JsonProperty("type") String type,
             @JsonProperty("user") String user,
@@ -18,5 +18,20 @@ public class AnimalsInfo {
         this.type = type;
         this.user = user;
         this.upvotes = upvotes;
+    }
+
+    public String getUpvotes() {
+        return upvotes;
+    }
+
+    @Override
+    public String toString() {
+        return "AnimalsInfo{" +
+                "id='" + id + '\'' +
+                ", text='" + text + '\'' +
+                ", type='" + type + '\'' +
+                ", user='" + user + '\'' +
+                ", upvotes='" + upvotes + '\'' +
+                '}';
     }
 }
